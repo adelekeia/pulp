@@ -242,6 +242,16 @@ spec:
                   replicas: 1
                 description: Api defines desired state of pulpcore-api resources
                 properties:
+                  securityContext:
+                    description: securityContext for pulpcore containers.
+                    properties:
+                      fsGroup:
+                        description: "securityContext fsGroup value"
+                        type: integer
+                      runAsUser:
+                        description: "securityContext runAsUser value"
+                        type: integer
+                    type: object
                   affinity:
                     description: Affinity is a group of affinity scheduling rules.
                     properties:
@@ -3498,6 +3508,16 @@ spec:
               content:
                 description: Content defines desired state of pulpcore-content resources
                 properties:
+                  securityContext:
+                    description: securityContext for pulpcore containers.
+                    properties:
+                      fsGroup:
+                        description: "securityContext fsGroup value"
+                        type: integer
+                      runAsUser:
+                        description: "securityContext runAsUser value"
+                        type: integer
+                    type: object
                   affinity:
                     description: Affinity is a group of affinity scheduling rules.
                     properties:
@@ -7386,6 +7406,16 @@ spec:
                 description: Web defines desired state of pulpcore-web (reverse-proxy)
                   resources
                 properties:
+                  securityContext:
+                    description: securityContext for pulpcore containers.
+                    properties:
+                      fsGroup:
+                        description: "securityContext fsGroup value"
+                        type: integer
+                      runAsUser:
+                        description: "securityContext runAsUser value"
+                        type: integer
+                    type: object
                   env_vars:
                     description: Environment variables to add to pulpcore-web container
                     items:
@@ -8028,6 +8058,16 @@ spec:
               worker:
                 description: Worker defines desired state of pulpcore-worker resources
                 properties:
+                  securityContext:
+                    description: securityContext for pulpcore containers.
+                    properties:
+                      fsGroup:
+                        description: "securityContext fsGroup value"
+                        type: integer
+                      runAsUser:
+                        description: "securityContext runAsUser value"
+                        type: integer
+                    type: object
                   affinity:
                     description: Affinity is a group of affinity scheduling rules.
                     properties:
